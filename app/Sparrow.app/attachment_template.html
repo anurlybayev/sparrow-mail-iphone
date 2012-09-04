@@ -1,0 +1,31 @@
+<div>
+	{{#ATTACHMENT_IMAGE}}
+	<div ontouchstart="attachmentTouchStart(event, '{{PART_ID}}')"
+        ontouchend="attachmentTouchEnd(event, '{{PART_ID}}')"
+        ontouchcancel="attachmentTouchCancel(event, '{{PART_ID}}')"
+        ontouchmove="attachmentTouchMove(event, '{{PART_ID}}')">
+		<img src="{{IMAGE_PATH:none}}" class="-sparrow-image-attachment"/>
+		{{#ATTACHMENT_FILENAME}}
+        <!--
+		<div class="-sparrow-attachment-placeholder-filename">{{FILENAME}}</div>
+         -->
+		{{/ATTACHMENT_FILENAME}}
+	</div>
+	{{/ATTACHMENT_IMAGE}}
+    
+	{{#ATTACHMENT_OTHER}}
+	<div>
+        <!--
+        <a href="" onclick="attachmentClicked('{{PART_ID}}')">
+            <img src="{{ICON_PATH:none}}" class="-sparrow-attachment-placeholder"/>
+        </a>
+		{{#ATTACHMENT_FILENAME}}
+		<div class="-sparrow-attachment-placeholder-filename">{{FILENAME}}</div>
+		{{/ATTACHMENT_FILENAME}}
+		{{#ATTACHMENT_FILESIZE}}
+		<div class="-sparrow-attachment-placeholder-size">{{FILESIZE}}</div>
+		{{/ATTACHMENT_FILESIZE}}
+         -->
+	</div>
+	{{/ATTACHMENT_OTHER}}
+</div>

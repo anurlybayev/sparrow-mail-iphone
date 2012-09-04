@@ -1,0 +1,64 @@
+{{%AUTOESCAPE context="HTML"}}
+
+<div>
+    <br/>
+</div>
+<div id="{{SIGNATURE_IDNAME}}"></div>
+
+<p style="color: #A0A0A8;">{{FORWARDED_MESSAGE_LABEL}}</p>
+<blockquote type="cite" style="border-left-style:solid;border-width:1px;margin-left:0px;padding-left:10px;">
+    <div>
+        {{#FROM}}
+        <b>{{FORWARDED_FROM_LABEL}}</b> {{MESSAGE_FROM}}<br/>
+        {{/FROM}}
+        {{#REPLY_TO}}
+        <b>{{FORWARDED_REPLYTO_LABEL}}</b> {{MESSAGE_REPLY_TO}}<br/>
+        {{/REPLY_TO}}
+        {{#TO}}
+        <b>{{FORWARDED_TO_LABEL}}</b> {{MESSAGE_TO}}<br/>
+        {{/TO}}
+        {{#CC}}
+        <b>{{FORWARDED_CC_LABEL}}</b> {{MESSAGE_CC}}<br/>
+        {{/CC}}
+        <b>{{FORWARDED_DATE_LABEL}}</b> {{MESSAGE_DATE}}<br/>
+        <b>{{FORWARDED_SUBJECT_LABEL}}</b> {{MESSAGE_SUBJECT:none}}<br/>
+    </div>
+    
+    <br/>
+    
+    <div id="message-body">
+    </div>
+
+    {{#ATTACHMENTS_SEPARATOR}}
+    <div style="border-bottom: 1px solid #f0f0f0; height: 10px;">
+    </div>
+    <br/>
+    
+    <div style="font-weight: bold; font-size: 14px; margin-bottom: 5px;">{{REPLY_ATTACHMENTS_LABEL}}</div>
+    {{/ATTACHMENTS_SEPARATOR}}
+    
+    {{#ATTACHMENTS}}
+    
+    {{#ATTACHMENT_IMAGE}}
+    <div>
+        {{#ATTACHMENT_FILENAME}}
+        <div style="">- {{FILENAME}}</div>
+        {{/ATTACHMENT_FILENAME}}
+    </div>
+    {{/ATTACHMENT_IMAGE}}
+    
+    {{#ATTACHMENT_OTHER}}
+    <div>
+        {{#ATTACHMENT_FILENAME}}
+        <div style="">- {{FILENAME}}</div>
+        {{/ATTACHMENT_FILENAME}}
+    </div>
+    {{/ATTACHMENT_OTHER}}
+    
+    {{/ATTACHMENTS}}
+
+</blockquote>
+
+<div>
+    <br/>
+</div>

@@ -1,0 +1,35 @@
+{{%AUTOESCAPE context="HTML"}}
+
+<div>
+    <br/>
+</div>
+<div id="{{SIGNATURE_IDNAME}}"></div>
+
+<p style="color: #A0A0A8;">{{FORWARDED_MESSAGE_LABEL}}</p>
+<blockquote type="cite" style="border-left-style:solid;border-width:1px;margin-left:0px;padding-left:10px;">
+    <div>
+        {{#FROM}}
+        <b>{{FORWARDED_FROM_LABEL}}</b> {{MESSAGE_FROM}}<br/>
+        {{/FROM}}
+        {{#REPLY_TO}}
+        <b>{{FORWARDED_REPLYTO_LABEL}}</b> {{MESSAGE_REPLY_TO}}<br/>
+        {{/REPLY_TO}}
+        {{#TO}}
+        <b>{{FORWARDED_TO_LABEL}}</b> {{MESSAGE_TO}}<br/>
+        {{/TO}}
+        {{#CC}}
+        <b>{{FORWARDED_CC_LABEL}}</b> {{MESSAGE_CC}}<br/>
+        {{/CC}}
+        <b>{{FORWARDED_DATE_LABEL}}</b> {{MESSAGE_DATE}}<br/>
+        <b>{{FORWARDED_SUBJECT_LABEL}}</b> {{MESSAGE_SUBJECT:none}}<br/>
+    </div>
+    
+    <br/>
+    
+    <div id="message-body">
+    </div>
+</blockquote>
+
+<div>
+    <br/>
+</div>

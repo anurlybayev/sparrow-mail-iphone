@@ -1,0 +1,100 @@
+body {
+    font-family: Helvetica;
+    font-size: 14.5px;
+    -webkit-text-size-adjust:none;
+    word-wrap: break-word;
+    -webkit-nbsp-mode: space;
+    margin: 0px;
+}
+
+a {
+    color: #006AE3;
+}
+
+a:hover {
+    /*color:#005ec9;*/
+    color:#004eb9;
+}
+
+a:active {
+    color:#008AF3;
+}
+
+blockquote {
+    margin-left:0px;
+    padding-left:10px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+blockquote[type=cite] {
+    border-left-style:solid;
+    border-left-color:#002162;
+    border-width:1px;
+    color:#002162;
+    margin-left:0px;
+    padding-left:10px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+div.-sparrow-quotedTextLabelHide {
+    font-family: Helvetica;
+    font-size: 11px;
+	color:#006AE3;	
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: block;
+	cursor: default;
+    -webkit-user-select: none;
+    width: 30px;
+    height: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background-image: url(MessageShowQuotedtext@2x.png);*/
+    background-size: 30px 14px;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
+}
+
+div.-sparrow-quotedTextLabelHide:hover {
+	/*color:#005ec9;*/
+	color:#004eb9;
+}
+
+div.-sparrow-quotedTextLabelHide:active {
+	color:#008AF3;
+}
+
+div.-sparrow-messageAttachmentContainer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.-sparrow-image-attachment {
+    max-width: 300px;
+}
+
+.-sparrow-attachment-placeholder {
+    max-width: 64px;
+}
+
+.-sparrow-attachment-placeholder-filename {
+    color: #888;
+    font-size: 14px;
+}
+
+.-sparrow-attachment-placeholder-size {
+    color: #888;
+    font-size: 14px;
+}
+
+#main-body {
+    min-height: 100%;
+    padding: 8px;
+}

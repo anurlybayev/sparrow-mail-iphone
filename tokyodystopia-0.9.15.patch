@@ -1,0 +1,36 @@
+diff -Naur downloads/tokyodystopia-0.9.15/laputa.c tokyodystopia-0.9.15/laputa.c
+--- downloads/tokyodystopia-0.9.15/laputa.c	2010-08-05 08:24:53.000000000 +0200
++++ tokyodystopia-0.9.15/laputa.c	2012-02-15 14:52:41.000000000 +0100
+@@ -821,6 +821,7 @@
+       bopts |= BDBTTCBS;
+       wopts |= WDBTTCBS;
+     }
++    tchdbsetxmsiz(txdb, 0);
+     if(jdb->exopts & JDBXNOTXT){
+       if(!tchdbtune(txdb, 1, 0, 0, 0)) return false;
+     } else {
+diff -Naur downloads/tokyodystopia-0.9.15/tcwdb.c tokyodystopia-0.9.15/tcwdb.c
+--- downloads/tokyodystopia-0.9.15/tcwdb.c	2010-08-05 08:24:53.000000000 +0200
++++ tokyodystopia-0.9.15/tcwdb.c	2012-02-15 14:56:06.000000000 +0100
+@@ -22,13 +22,18 @@
+ #define WDBMAXWORDLEN  1024              // maximum length of each search word
+ #define WDBWORDUNIT    1024              // unit number of word allocation
+ #define WDBRESUNIT     1024              // unit number of result allocation
+-#define WDBCCBNUM      1048573           // bucket number of the token cache
++//#define WDBCCBNUM      1048573           // bucket number of the token cache
+ #define WDBCCDEFICSIZ  (1024LL*1024*128) // default capacity of the token cache
+-#define WDBDIDSBNUM    262139            // bucket number of the deleted ID set
+-#define WDBDTKNBNUM    262139            // bucket number of the deleted token map
++//#define WDBDIDSBNUM    262139            // bucket number of the deleted ID set
++//#define WDBDTKNBNUM    262139            // bucket number of the deleted token map
+ #define WDBDEFFWMMAX   2048              // default maximum number forward matching expansion
+ #define WDBHJBNUMCO    4                 // coefficient of the bucket number for hash join
+ 
++// for sparrow, footprint size
++#define WDBCCBNUM      65521            // bucket number of the token cache
++#define WDBDIDSBNUM    13309             // bucket number of the deleted ID set
++#define WDBDTKNBNUM    13309             // bucket number of the deleted token map
++
+ #define WDBDEFETNUM    1000000           // default expected token number
+ #define WDBLMEMB       256               // number of members in each leaf of the index
+ #define WDBNMEMB       512               // number of members in each node of the index

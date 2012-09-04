@@ -1,0 +1,44 @@
+Only in ./gdata-objectivec-client: .DS_Store
+Only in ./gdata-objectivec-client/Source: .DS_Store
+Only in ./gdata-objectivec-client/Source/GData.xcodeproj: project.xcworkspace
+Only in ./gdata-objectivec-client/Source/GData.xcodeproj: xcuserdata
+diff -crB ./downloads/gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.h ./gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.h
+*** ./downloads/gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.h	2011-01-24 11:39:38.000000000 +0100
+--- ./gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.h	2011-07-22 10:17:03.000000000 +0200
+***************
+*** 664,669 ****
+--- 664,675 ----
+  
+  @end
+  
++ @interface GDataHTTPFetcher (Protected)
++ 
++ - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
++ 
++ @end
++ 
+  @interface GDataCookieStorage : NSObject {
+    // The cookie storage object manages an array holding cookies, but the array
+    // is allocated externally (it may be in a fetcher object or the static
+diff -crB ./downloads/gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.m ./gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.m
+*** ./downloads/gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.m	2011-04-04 17:06:36.000000000 +0200
+--- ./gdata-objectivec-client/Source/Networking/GDataHTTPFetcher.m	2011-07-22 10:13:14.000000000 +0200
+***************
+*** 110,117 ****
+  //
+  // GDataHTTPFetcher
+  //
+! 
+! @interface GDataHTTPFetcher (PrivateMethods)
+  - (void)stopFetchReleasingBlocks:(BOOL)shouldReleaseBlocks;
+  
+  - (void)addCookiesToRequest:(NSMutableURLRequest *)request;
+--- 110,116 ----
+  //
+  // GDataHTTPFetcher
+  //
+! @interface GDataHTTPFetcher (PrivateMethods) <NSURLConnectionDelegate>
+  - (void)stopFetchReleasingBlocks:(BOOL)shouldReleaseBlocks;
+  
+  - (void)addCookiesToRequest:(NSMutableURLRequest *)request;
+Only in ./downloads/gdata-objectivec-client: gdata-objectivec-client-1.12.0.zip

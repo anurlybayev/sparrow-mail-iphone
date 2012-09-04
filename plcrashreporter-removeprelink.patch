@@ -1,0 +1,76 @@
+*** tmp/plcrashreporter-420/CrashReporter.xcodeproj/project.pbxproj	2011-10-27 12:39:07.000000000 +0200
+--- plcrashreporter-420/CrashReporter.xcodeproj/project.pbxproj	2011-12-08 16:45:20.000000000 +0100
+***************
+*** 2433,2439 ****
+  				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
+  				GCC_DYNAMIC_NO_PIC = NO;
+  				GCC_OPTIMIZATION_LEVEL = 0;
+- 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+  				MACH_O_TYPE = staticlib;
+  				ONLY_ACTIVE_ARCH = NO;
+--- 2433,2438 ----
+***************
+*** 2451,2457 ****
+  				COPY_PHASE_STRIP = YES;
+  				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+  				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
+- 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+  				MACH_O_TYPE = staticlib;
+  				ONLY_ACTIVE_ARCH = NO;
+--- 2450,2455 ----
+***************
+*** 2471,2477 ****
+  				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
+  				GCC_DYNAMIC_NO_PIC = NO;
+  				GCC_OPTIMIZATION_LEVEL = 0;
+- 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				HEADER_SEARCH_PATHS = "$(inherited)";
+  				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+  				MACH_O_TYPE = staticlib;
+--- 2469,2474 ----
+***************
+*** 2490,2496 ****
+  				COPY_PHASE_STRIP = YES;
+  				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+  				EXPORTED_SYMBOLS_FILE = Resources/CrashReporter.exp;
+- 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+  				MACH_O_TYPE = staticlib;
+  				ONLY_ACTIVE_ARCH = NO;
+--- 2487,2492 ----
+***************
+*** 2780,2786 ****
+  				GCC_OPTIMIZATION_LEVEL = 0;
+  				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+  				GCC_PREFIX_HEADER = "";
+! 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				INSTALL_PATH = /usr/local/lib;
+  				OTHER_LDFLAGS = (
+  					"-framework",
+--- 2776,2782 ----
+  				GCC_OPTIMIZATION_LEVEL = 0;
+  				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+  				GCC_PREFIX_HEADER = "";
+! 				GENERATE_MASTER_OBJECT_FILE = NO;
+  				INSTALL_PATH = /usr/local/lib;
+  				OTHER_LDFLAGS = (
+  					"-framework",
+***************
+*** 2805,2811 ****
+  				GCC_MODEL_TUNING = G5;
+  				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+  				GCC_PREFIX_HEADER = "";
+! 				GENERATE_MASTER_OBJECT_FILE = YES;
+  				INSTALL_PATH = /usr/local/lib;
+  				OTHER_LDFLAGS = (
+  					"-framework",
+--- 2801,2807 ----
+  				GCC_MODEL_TUNING = G5;
+  				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+  				GCC_PREFIX_HEADER = "";
+! 				GENERATE_MASTER_OBJECT_FILE = NO;
+  				INSTALL_PATH = /usr/local/lib;
+  				OTHER_LDFLAGS = (
+  					"-framework",

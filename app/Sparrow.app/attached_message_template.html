@@ -1,0 +1,30 @@
+{{%AUTOESCAPE context="HTML"}}
+        <p>{{FORWARDED_MESSAGE_LABEL}}</p>
+		<blockquote type="cite" style="border-left-style:solid;border-width:1px;margin-left:0px;padding-left:10px;">
+        <div>
+            {{#FROM}}
+            <b>{{ATTACHED_MESSAGE_FROM_LABEL}}</b> {{MESSAGE_FROM}}<br/>
+            {{/FROM}}
+            {{#REPLY_TO}}
+            <b>{{ATTACHED_MESSAGE_REPLYTO_LABEL}}</b> {{MESSAGE_REPLY_TO}}<br/>
+            {{/REPLY_TO}}
+            {{#UNDISCLOSED_RECIPIENT}}
+            <b>{{ATTACHED_MESSAGE_TO_LABEL}}</b> <span style="font-style:italic; margin-left: 6px;">undisclosed recipient</span></br/>
+            {{/UNDISCLOSED_RECIPIENT}}
+            {{#TO}}
+            <b>{{ATTACHED_MESSAGE_TO_LABEL}}</b> {{MESSAGE_TO}}<br/>
+            {{/TO}}
+            {{#CC}}
+            <b>{{ATTACHED_MESSAGE_CC_LABEL}}</b> {{MESSAGE_CC}}<br/>
+            {{/CC}}
+            {{#BCC}}
+            <b>{{ATTACHED_MESSAGE_BCC_LABEL}}</b> {{MESSAGE_BCC}}<br/>
+            {{/BCC}}
+            <b>{{ATTACHED_MESSAGE_DATE_LABEL}}</b> {{MESSAGE_DATE}}<br/>
+            <b>{{ATTACHED_MESSAGE_SUBJECT_LABEL}}</b> {{MESSAGE_SUBJECT}}<br/>
+        </div>
+		<br/>
+        <div>
+{{CONTENTS:none}}
+</div>
+</blockquote>
